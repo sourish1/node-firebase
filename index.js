@@ -2,7 +2,7 @@ var express = require('express');
 var firebase = require('firebase');
 var bodyParser = require('body-parser');
 
-//var seedData = require('./users.json');
+var sendEmail = require('./mail.js');
 
 var app = express();
 
@@ -35,6 +35,7 @@ app.post('/add', (req, res) => {
             });
     if(user)
     {
+        sendEmail(req.body.email, req.body.name);
         res.status(200).send(user);
     }
 });
