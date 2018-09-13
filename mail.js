@@ -3,23 +3,23 @@ var nodemailer = require('nodemailer');
 var sendEmail = function(senderEmail, username)
 {
     var transporter = nodemailer.createTransport({
-        // service: 'gmail',
-        // auth: {
-        //        user: 'senroxx440@gmail.com',
-        //        pass: ''
-        //    },
-        // tls: {
-        //     rejectUnauthorized: false
-        // }
-        host: 'smtp.ethereal.email',
-        port: 587,
+        service: 'gmail',
         auth: {
-            user: 'arbdprwhbnaaimua@ethereal.email',
-            pass: '6kQY6uEWYXHwVx1AFa'
-        },
+               user: 'senroxx440@gmail.com', //host email address
+               pass: '' //host email password
+           },
         tls: {
             rejectUnauthorized: false
         }
+        // host: 'smtp.ethereal.email',
+        // port: 587,
+        // auth: {
+        //     user: 'arbdprwhbnaaimua@ethereal.email',
+        //     pass: '6kQY6uEWYXHwVx1AFa'
+        // },
+        // tls: {
+        //     rejectUnauthorized: false
+        // }
        });
     
     const mailOptions = {
