@@ -57,6 +57,10 @@ app.get('/fetch', (req, res) => {
     });      
 });
 
-
+app.get('/', (req, res) => {
+    res.send({
+        message: "welcome to node-firebase app"
+    });
+});
 
 app.listen(port);
